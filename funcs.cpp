@@ -1,4 +1,7 @@
 #include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <climits>
 #include <string>
 #include <cctype>
 
@@ -20,9 +23,11 @@ std::string unindent(std::string filename){
 
   std::string line, final;
 
+  getline(fin,line);
+  final += removeLeadingSpaces(line);
+
   while(getline(fin,line)) {
-    removeLeadingSpaces(line);
-    final += line + '\n';
+    final += '\n' + removeLeadingSpaces(line);
   }
 
   return final;
@@ -30,7 +35,7 @@ std::string unindent(std::string filename){
 }
 
 int countChar(std::string line, char c){
-  
+
 }
 
 std::string indent(std::string filename){
