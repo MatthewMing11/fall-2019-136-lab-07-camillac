@@ -4,8 +4,7 @@
 #include "funcs.h"
 #include <string>
 
-int main(int argc, char *argv[]){
-  std::cout << "HELLO" << std::endl;
+int main(){
   std::cout << indent("bad-code.cpp") << std::endl;
   return 0;
 }

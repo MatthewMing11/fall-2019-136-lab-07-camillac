@@ -6,7 +6,7 @@
 #include <cctype>
 
 std::string removeLeadingSpaces(std::string line){
-  int counter;
+  int counter = 0;
   while (isspace(line[counter])){
     counter++;
   }
@@ -14,7 +14,8 @@ std::string removeLeadingSpaces(std::string line){
 }
 
 int countChar(std::string line, char c){
-  int i, num_chars;
+  int i = 0;
+  int num_chars = 0;
   while (line[i]){
     if (line[i] == c){
       num_chars++;
