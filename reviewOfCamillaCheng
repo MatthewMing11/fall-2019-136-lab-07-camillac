@@ -1,0 +1,4 @@
+- Running main and tests both resulted in a segmentation fault
+- CountChar and removeLeadingSpaces look like they could work, but the only test case is for indent, which failed
+- Can't tell from a look where indent failed
+- After sending my review, Camilla remembered to push a fix to the problem, everything worked
