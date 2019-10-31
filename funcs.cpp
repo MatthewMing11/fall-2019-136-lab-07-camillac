@@ -13,15 +13,27 @@ std::string removeLeadingSpaces(std::string line){
   return line.substr(counter);
 }
 
+bool in_comment=false;
 int countChar(std::string line, char c){
   int i = 0;
   int num_chars = 0;
+  bool temp = false;
   while (line[i]){
-    if (line[i] == c){
+    if(line.substr(i,2)=="//" || line.substr(i,2)=="/*"){
+      in_comment=true;
+      temp=(line.substr(i,2)=="//");
+   }
+    if (line[i] == c && !in_comment){
       num_chars++;
     }
+    if(line.substr(i,2)=="*/"){
+      in_comment=false;
+   }
     i++;
   }
+  if(temp){
+     in_comment=false;
+ }
   return num_chars;
 }
 

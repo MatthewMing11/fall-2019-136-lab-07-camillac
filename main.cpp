@@ -6,5 +6,6 @@
 
 int main(){
   std::cout << indent("bad-code.cpp") << std::endl;
+  std::cout << indent("testfile") << std::endl;
   return 0;
 }
